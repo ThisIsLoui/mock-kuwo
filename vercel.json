@@ -1,19 +1,14 @@
 {
   "functions": {
     "api/proxyApi.ts": {
-      "handler": "api/proxyApi.ts"
     },
     "api/proxyOfficialWebsite.ts": {
-      "handler": "api/proxyOfficialWebsite.ts"
     },
     "api/proxyComment.ts": {
-      "handler": "api/proxyComment.ts"
     },
     "api/proxyPlayurl.ts": {
-      "handler": "api/proxyPlayurl.ts"
     },
     "api/proxyPayType.ts": {
-      "handler": "api/proxyPayType.ts"
     }
   },
   "rewrites": [

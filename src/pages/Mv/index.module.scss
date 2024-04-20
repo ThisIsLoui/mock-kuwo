@@ -1,0 +1,52 @@
+.show {
+  padding: 30px 0 24px;
+  background: #262626;
+
+  .top {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 22px;
+
+    .left {
+      display: flex;
+      flex: 1;
+      align-items: center;
+      overflow: hidden;
+      font-size: 26px;
+      font-weight: 600;
+      color: hsl(0deg 0% 100% / 60%);
+      text-overflow: ellipsis;
+      white-space: nowrap;
+
+      .divider {
+        margin: 0 5px;
+      }
+
+      .title {
+        overflow: hidden;
+        color: hsl(0deg 0% 100% / 80%);
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+    }
+
+    .right {
+      display: flex;
+      column-gap: 10px;
+    }
+  }
+
+  .bottom {
+    display: flex;
+    align-items: center;
+    margin-top: 13px;
+    font-size: 14px;
+    font-weight: 400;
+    color: hsl(0deg 0% 100% / 60%);
+
+    svg {
+      margin-right: 3px;
+      font-size: 17px;
+    }
+  }
+}

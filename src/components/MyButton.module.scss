@@ -1,0 +1,24 @@
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  padding: 0 30px;
+  font-size: 16px;
+  color: #333;
+  text-align: center;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  background: #f2f2f2;
+  border: none;
+  border-radius: 22px;
+
+  svg {
+    margin-right: 5px;
+    font-size: 20px;
+  }
+
+  &.yellow {
+    background: #ffe12c;
+  }
+}

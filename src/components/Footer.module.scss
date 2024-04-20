@@ -1,0 +1,25 @@
+.footer {
+  position: absolute;
+  bottom: 70px;
+  left: 0;
+  width: 100%;
+  padding: 22px 0;
+  font-size: 12px;
+  font-weight: 400;
+  color: grey;
+  text-align: center;
+  background: #1f1f1f;
+
+  p {
+    margin: 14px 0;
+
+    .link {
+      color: grey;
+      text-decoration: none;
+
+      &:hover {
+        color: #ffe443;
+      }
+    }
+  }
+}

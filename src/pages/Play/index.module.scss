@@ -1,0 +1,53 @@
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 22px;
+
+  .right {
+    width: 70%;
+
+    .title {
+      margin-bottom: 14px;
+      overflow: hidden;
+      font-size: 30px;
+      font-weight: 600;
+      line-height: 42px;
+      color: #333;
+      word-break: break-all;
+    }
+
+    .user {
+      display: flex;
+      align-items: center;
+      height: 20px;
+      margin-bottom: 18px;
+      font-size: 16px;
+      font-weight: 400;
+      color: #666;
+
+      img {
+        width: 32px;
+        height: 32px;
+        margin-right: 10px;
+        border-radius: 50%;
+      }
+    }
+
+    .tag {
+      font-size: 14px;
+      color: #296294;
+    }
+
+    .btns {
+      display: flex;
+      margin-top: 32px;
+      margin-bottom: 40px;
+    }
+
+    .paginate {
+      display: flex;
+      justify-content: center;
+      margin-top: 28px;
+    }
+  }
+}

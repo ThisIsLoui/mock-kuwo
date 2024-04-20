@@ -1,0 +1,86 @@
+.title {
+  margin-top: 48px;
+  line-height: 30px;
+  color: #333;
+  vertical-align: baseline;
+
+  h2 {
+    display: inline-block;
+    font-size: 22px;
+    font-weight: 600;
+  }
+}
+
+.lyric {
+  position: relative;
+  height: 400px;
+  overflow: hidden;
+
+  .scroll {
+    position: absolute;
+    width: 100%;
+    height: fit-content;
+    transition: all 0.3s ease-out;
+
+    .line {
+      height: 50px;
+      overflow: hidden;
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 50px;
+      color: #999;
+      text-align: center;
+      text-overflow: ellipsis;
+      text-wrap: nowrap;
+      letter-spacing: 1.5px;
+
+      &.active {
+        font-weight: 600;
+        color: #333;
+      }
+    }
+  }
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 500;
+    width: 100%;
+    height: 80px;
+    content: '';
+    background: linear-gradient(180deg, #fff 0%, rgb(255 255 255 / 60%) 40%, rgb(255 255 255 / 10%) 100%);
+  }
+
+  &::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 500;
+    width: 100%;
+    height: 80px;
+    content: '';
+    background: linear-gradient(0deg, #fff 0%, rgb(255 255 255 / 60%) 40%, rgb(255 255 255 / 10%) 100%);
+  }
+}
+
+.empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+
+  img {
+    width: 260px;
+    object-fit: cover;
+  }
+
+  p {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #999;
+    letter-spacing: 0.5px;
+    word-break: break-all;
+  }
+}

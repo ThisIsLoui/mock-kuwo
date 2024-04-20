@@ -1,11 +1,15 @@
 import { Outlet } from 'react-router-dom'
+import Navbar from '../components/Navbar'
+import Footer from '../components/Footer'
+import Player from '../components/Player'
 
 export default function MainLayout() {
   return (
     <>
-      <header>123</header>
+      <Navbar />
       <Outlet />
-      <footer>456</footer>
+      <Footer />
+      <Player />
     </>
   )
 }

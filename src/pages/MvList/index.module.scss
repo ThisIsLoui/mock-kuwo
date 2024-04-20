@@ -1,0 +1,27 @@
+.wrapper {
+  margin-top: 22px;
+
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+  }
+
+  li {
+    margin-right: 6px;
+  }
+
+  .list {
+    display: flex;
+    flex-wrap: wrap;
+
+    // justify-content: space-between;
+    margin-top: 29px;
+  }
+
+  .paginate {
+    display: flex;
+    justify-content: center;
+    margin-top: 28px;
+  }
+}

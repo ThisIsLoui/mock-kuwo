@@ -1,0 +1,75 @@
+.load {
+  height: 22px;
+  line-height: 22px;
+  text-align: center;
+
+  span {
+    display: inline-block;
+    width: 4px;
+    margin: 0 2px;
+    vertical-align: middle;
+    background: #ffe200;
+    border-radius: 2px;
+
+    &.side1 {
+      height: 6px;
+      animation: first 1s linear infinite;
+    }
+
+    &.side2 {
+      height: 14px;
+      animation: second 1s linear infinite;
+    }
+
+    &.mid {
+      height: 22px;
+      animation: middle 1s linear infinite;
+    }
+  }
+}
+
+@keyframes first {
+  0% {
+    height: 6px;
+  }
+
+  56% {
+    height: 22px;
+  }
+
+  100% {
+    height: 6px;
+  }
+}
+
+@keyframes second {
+  0% {
+    height: 14px;
+  }
+
+  28% {
+    height: 22px;
+  }
+
+  80% {
+    height: 6px;
+  }
+
+  100% {
+    height: 14px;
+  }
+}
+
+@keyframes middle {
+  0% {
+    height: 22px;
+  }
+
+  56% {
+    height: 6px;
+  }
+
+  100% {
+    height: 22px;
+  }
+}

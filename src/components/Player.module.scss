@@ -1,0 +1,320 @@
+.player {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 998;
+  width: 100%;
+  height: 70px;
+  background: #fff;
+  box-shadow: 0 0 20px 0 rgb(0 0 0 / 10%);
+
+  .inner {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1640px;
+    padding: 0 120px;
+
+    .bar {
+      margin: 0;
+
+      :global(.ant-slider-rail) {
+        background: rgb(0 0 0 / 5%);
+      }
+
+      :global(.ant-slider-track) {
+        background: #ffdf1f;
+      }
+
+      :global(.ant-slider-handle) {
+        box-shadow: 0 0 15px 0 rgb(0 0 0 / 15%);
+
+        &::before {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          z-index: 99;
+          width: 5px;
+          height: 5px;
+          content: '';
+          background-color: #ffdf1f;
+          border-radius: 50%;
+          transform: translate(-50%, -50%);
+        }
+
+        &::after {
+          box-shadow: none;
+        }
+      }
+    }
+
+    .left {
+      display: flex;
+
+      .cover {
+        display: block;
+
+        img {
+          width: 70px;
+          height: 70px;
+          margin-right: 20px;
+        }
+      }
+
+      .info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 18px 0;
+
+        .top {
+          display: flex;
+          justify-content: space-between;
+
+          .title {
+            width: 290px;
+            padding-right: 10px;
+            overflow: hidden;
+            font-size: 14px;
+            color: #333;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            vertical-align: middle;
+
+            .singer {
+              margin-left: 5px;
+              color: #666;
+              text-decoration: none;
+            }
+          }
+
+          .time {
+            font-size: 14px;
+            color: #999;
+          }
+        }
+      }
+    }
+
+    .centre {
+      display: flex;
+      flex-shrink: 0;
+      align-items: center;
+      font-size: 38px;
+      font-weight: 200;
+      color: #333;
+
+      .prev {
+        text-align: center;
+        cursor: pointer;
+      }
+
+      .play {
+        margin: 0 20px;
+        text-align: center;
+        cursor: pointer;
+      }
+
+      .next {
+        text-align: center;
+        cursor: pointer;
+      }
+
+      svg {
+        display: block;
+      }
+    }
+
+    .right {
+      display: flex;
+      flex-shrink: 0;
+      column-gap: 34px;
+      align-items: center;
+      font-size: 18px;
+      color: #666;
+      cursor: pointer;
+
+      svg {
+        display: block;
+      }
+
+      .comment {
+        display: block;
+        color: #666;
+        text-decoration: none;
+      }
+
+      .volume {
+        display: flex;
+        align-items: center;
+
+        .bar {
+          width: 86px;
+          margin-left: 10px;
+        }
+      }
+    }
+
+    .panel {
+      position: absolute;
+      right: 14%;
+      bottom: 80px;
+      width: 512px;
+      padding: 34px 0 20px;
+      background: #fff;
+      box-shadow: 0 4px 20px 0 rgb(65 67 70 / 8%);
+
+      .panel-top {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 23px 0 25px;
+
+        .panel-left {
+          display: flex;
+          align-items: center;
+          font-size: 16px;
+          font-weight: 600;
+          color: #333;
+
+          span {
+            margin-left: 5px;
+            font-size: 14px;
+            font-weight: 300;
+          }
+        }
+
+        .panel-right {
+          display: flex;
+          align-items: center;
+          color: #999;
+
+          .delete {
+            display: flex;
+            align-items: center;
+            margin-right: 21px;
+            font-size: 14px;
+            cursor: pointer;
+
+            svg {
+              margin-right: 3px;
+            }
+          }
+
+          .close {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+          }
+        }
+      }
+
+      .panel-list {
+        max-height: 414px;
+        margin-top: 20px;
+        overflow-y: auto;
+        scroll-behavior: smooth;
+
+        .panel-item {
+          display: flex;
+          align-items: center;
+          height: 46px;
+          padding: 0 25px;
+          font-size: 14px;
+          color: #333;
+
+          .index {
+            position: relative;
+            flex-shrink: 0;
+            width: 16px;
+            height: 20px;
+            margin-right: 8px;
+            line-height: 20px;
+            text-align: center;
+          }
+
+          .name {
+            display: block;
+            flex-shrink: 0;
+            width: 198px;
+            height: 20px;
+            margin-right: 22px;
+            overflow: hidden;
+            font-weight: 400;
+            line-height: 20px;
+            color: #333;
+            text-decoration: none;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            cursor: pointer;
+          }
+
+          .artist {
+            display: block;
+            flex-shrink: 0;
+            width: 163px;
+            height: 20px;
+            overflow: hidden;
+            font-weight: 400;
+            line-height: 20px;
+            color: #666;
+            text-decoration: none;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+          }
+
+          .time {
+            height: 16px;
+            margin-left: 16px;
+            font-weight: 600;
+            line-height: 16px;
+          }
+
+          .opts {
+            display: none;
+            flex: 1;
+
+            svg {
+              margin-left: 13px;
+              font-size: 16px;
+              color: #333;
+              cursor: pointer;
+            }
+          }
+
+          &:hover {
+            background: #f7f7f7;
+
+            .time {
+              display: none;
+            }
+
+            .opts {
+              display: flex;
+            }
+          }
+
+          &.active {
+            background: #f7f7f7;
+          }
+        }
+      }
+
+      .empty {
+        margin: 109px 0;
+        text-align: center;
+
+        p {
+          font-size: 14px;
+          line-height: 24px;
+          color: #999;
+
+          a {
+            color: #296294;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+}

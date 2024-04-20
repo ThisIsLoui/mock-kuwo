@@ -1,6 +1,9 @@
 import { createBrowserRouter } from 'react-router-dom'
 import { RouteObject } from 'react-router-dom'
 import MainLayout from '../layouts/MainLayout'
+import { request } from '../utils/request'
+import getTargetCookie from '../utils/getTargetCookie'
+import ErrorPage from '../pages/ErrorPage/ErrorPage'
 // meta 里的属性类型
 interface metaType {
   auth?: boolean // auth：是否需要路由守卫进行身份验证
@@ -18,6 +21,16 @@ export const routes: RouteObject[] = [
   {
     path: '/',
     element: <MainLayout />,
+    errorElement: <ErrorPage />,
+    loader: async () => {
+      const { key: cookieKey, value: cookieValue } = getTargetCookie()
+      if (cookieKey && cookieValue) return null
+      // 如果本地没有 cookie，则请求官网首页，获取 cookie
+      await request({
+        url: '/officialWebsite',
+      })
+      return null
+    },
     children: [
       {
         path: '',
@@ -55,20 +68,39 @@ export const routes: RouteObject[] = [
         },
       },
       {
+        path: 'search',
+        lazy: async () => {
+          const Search = await import('../pages/Search')
+          return { Component: Search.default }
+        },
+      },
+      {
         path: 'album/:id',
-        element: <div>专辑详情</div>,
+        lazy: async () => {
+          const Album = await import('../pages/Album')
+          return { Component: Album.default }
+        },
       },
       {
         path: 'play/:id',
-        element: <div>歌单详情</div>,
+        lazy: async () => {
+          const Play = await import('../pages/Play')
+          return { Component: Play.default }
+        },
       },
       {
         path: 'song/:id',
-        element: <div>歌曲详情</div>,
+        lazy: async () => {
+          const Song = await import('../pages/Song')
+          return { Component: Song.default }
+        },
       },
       {
         path: 'mvplay/:id',
-        element: <div>MV详情</div>,
+        lazy: async () => {
+          const Mv = await import('../pages/Mv')
+          return { Component: Mv.default }
+        },
       },
       {
         path: 'singer/:id',
@@ -108,13 +140,6 @@ export const routes: RouteObject[] = [
         ],
       },
     ],
-  },
-  {
-    path: '*',
-    lazy: async () => {
-      const NotFound = await import('../pages/NotFound')
-      return { Component: NotFound.default }
-    },
   },
 ]
 // 通过路由列表创建 router 并导出

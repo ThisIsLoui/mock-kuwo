@@ -1,0 +1,44 @@
+.pagination {
+  display: flex;
+  list-style: none;
+
+  .page-item {
+    display: block;
+    margin: 0 5px;
+    line-height: 20px;
+
+    a {
+      display: block;
+      width: 42px;
+      height: 42px;
+      font-size: 14px;
+      line-height: 42px;
+      color: #999;
+      text-align: center;
+      text-decoration: none;
+      cursor: pointer;
+      user-select: none;
+
+      &:hover {
+        color: #333;
+        background: rgb(255 223 31);
+      }
+
+      &.break {
+        color: #333;
+        cursor: default;
+
+        &:hover {
+          background-color: transparent;
+        }
+      }
+    }
+
+    &.active {
+      a {
+        color: #333;
+        background: rgb(255 223 31);
+      }
+    }
+  }
+}

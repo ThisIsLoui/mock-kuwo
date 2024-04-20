@@ -1,0 +1,54 @@
+.title {
+  position: relative;
+  height: 25px;
+  padding-left: 14px;
+  margin-top: 49px;
+  margin-bottom: 24px;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 25px;
+
+  &::before {
+    position: absolute;
+    top: 3px;
+    left: 0;
+    width: 4px;
+    height: 76%;
+    content: '';
+    background: #ffe12c;
+  }
+}
+
+.list {
+  margin-bottom: 48px;
+
+  li {
+    display: flex;
+    align-items: center;
+    height: 54px;
+    padding-left: 2.81%;
+    font-size: 14px;
+    line-height: 20px;
+    color: #999;
+
+    &:nth-child(2n-1) {
+      background: #fafafa;
+    }
+
+    p {
+      width: 48.78%;
+      padding-right: 20px;
+
+      .value {
+        color: #333;
+      }
+    }
+  }
+}
+
+.profile {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 25px;
+  color: #333;
+}

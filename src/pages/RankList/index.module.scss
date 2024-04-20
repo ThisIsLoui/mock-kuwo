@@ -1,0 +1,48 @@
+.wrapper {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+
+  .right {
+    position: relative;
+    width: 76.14%;
+
+    .list {
+      .info {
+        vertical-align: baseline;
+
+        h2 {
+          display: inline-block;
+          height: 53px;
+          margin-top: 14px;
+          font-size: 38px;
+          font-weight: 600;
+          line-height: 53px;
+          color: #333;
+        }
+
+        p {
+          display: inline-block;
+          margin-left: 10px;
+          font-size: 14px;
+          line-height: 20px;
+          color: #999;
+        }
+      }
+
+      .btns {
+        display: flex;
+        gap: 10px;
+        margin-top: 23px;
+        margin-bottom: 40px;
+      }
+
+      .paginate {
+        display: flex;
+        justify-content: center;
+        margin-top: 48px;
+      }
+    }
+  }
+}

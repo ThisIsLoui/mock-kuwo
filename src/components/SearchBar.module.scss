@@ -1,0 +1,35 @@
+.search {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 240px;
+  height: 34px;
+  padding: 0 10px;
+  margin-right: 28px;
+  background: #f5f5f5;
+  border-radius: 2px;
+
+  svg {
+    width: 15px;
+    height: 15px;
+    margin-right: 5px;
+    color: #999;
+    cursor: pointer;
+  }
+
+  input {
+    width: 100%;
+    font-size: 14px;
+    line-height: 34px;
+    background: #f5f5f5;
+    border: none;
+
+    &:focus {
+      outline: none;
+    }
+
+    &::placeholder {
+      color: #999;
+    }
+  }
+}

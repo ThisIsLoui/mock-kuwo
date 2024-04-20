@@ -1,0 +1,47 @@
+.box {
+  width: 21.2%;
+
+  .cover {
+    margin-bottom: 40px;
+
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  h4 {
+    height: 30px;
+    margin-bottom: 10px;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 30px;
+  }
+
+  p {
+    width: 100%;
+    font-size: 14px;
+    line-height: 21px;
+    color: #666;
+    word-break: break-all;
+  }
+
+  .code {
+    margin: 36px 0;
+    text-align: center;
+    border-top: 1px solid #efefef;
+
+    img {
+      width: 168px;
+      height: 168px;
+      margin: 36px 0 18px;
+    }
+
+    p {
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 21px;
+      color: #666;
+    }
+  }
+}

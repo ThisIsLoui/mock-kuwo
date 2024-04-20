@@ -1,0 +1,30 @@
+.box {
+  position: relative;
+  overflow: hidden;
+
+  .mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 888;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    color: rgb(255 255 255 / 100%);
+    background: rgb(0 0 0 / 70%);
+
+    h3 {
+      margin-bottom: 10px;
+      font-size: 25px;
+      letter-spacing: 0.8px;
+    }
+
+    p {
+      margin-bottom: 15px;
+      letter-spacing: 0.5px;
+    }
+  }
+}

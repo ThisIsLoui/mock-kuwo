@@ -1,0 +1,15 @@
+.wrapper {
+  margin-top: 22px;
+
+  .list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 26px 1.41%;
+  }
+
+  .paginate {
+    display: flex;
+    justify-content: center;
+    margin-top: 48px;
+  }
+}

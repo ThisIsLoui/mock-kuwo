@@ -1,19 +1,39 @@
 /**
  * axios 请求封装
  */
+// @ts-expect-error generateSecret 没有类型定义
+import generateSecret from './generateSecret'
 import type { BaseQueryFn } from '@reduxjs/toolkit/query'
 import type { AxiosRequestConfig, AxiosError } from 'axios'
 import axios from 'axios'
 import { message } from 'antd'
+import getTargetCookie from './getTargetCookie'
 
 // 创建新的 axios 实例
 export const request = axios.create({
-  timeout: 10 * 1000,
+  timeout: 30 * 1000,
+  withCredentials: true,
 })
+// 请求拦截器
+request.interceptors.request.use(
+  function (config) {
+    // 在发送请求之前做些什么
+    const { key: cookieKey, value: cookieValue } = getTargetCookie()
+    if (cookieKey && cookieValue) config.headers['Secret'] = generateSecret(cookieValue, cookieKey)
+    return config
+  },
+  function (error) {
+    // 对请求错误做些什么
+    return Promise.reject(error)
+  },
+)
 // 响应拦截器
 request.interceptors.response.use(
   // 响应代码在 2xx 范围内
   function (response) {
+    if (response.data.success && response.data.success !== true) {
+      message.error(response.data.message || '请求错误')
+    }
     return response
   },
   // 响应代码不在 2xx 范围内

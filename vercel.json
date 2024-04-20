@@ -1,0 +1,45 @@
+{
+  "functions": {
+    "api/proxyApi.ts": {
+      "handler": "api/proxyApi.ts"
+    },
+    "api/proxyOfficialWebsite.ts": {
+      "handler": "api/proxyOfficialWebsite.ts"
+    },
+    "api/proxyComment.ts": {
+      "handler": "api/proxyComment.ts"
+    },
+    "api/proxyPlayurl.ts": {
+      "handler": "api/proxyPlayurl.ts"
+    },
+    "api/proxyPayType.ts": {
+      "handler": "api/proxyPayType.ts"
+    }
+  },
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/api/(.*)",
+      "destination": "/api/proxyApi"
+    },
+    {
+      "source": "/officialWebsite/(.*)",
+      "destination": "/api/proxyOfficialWebsite"
+    },
+    {
+      "source": "/comment/(.*)",
+      "destination": "/api/proxyComment"
+    },
+    {
+      "source": "/playurl/(.*)",
+      "destination": "/api/proxyPlayurl"
+    },
+    {
+      "source": "/payType/(.*)",
+      "destination": "/api/proxyPayType"
+    }
+  ]
+}

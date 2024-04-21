@@ -5,20 +5,44 @@
       "destination": "/api/proxyApi"
     },
     {
+      "source": "/api/(.*)/",
+      "destination": "/api/proxyApi/"
+    },
+    {
       "source": "/officialWebsite/(.*)",
       "destination": "/api/proxyOfficialWebsite"
+    },
+    {
+      "source": "/officialWebsite/(.*)/",
+      "destination": "/api/proxyOfficialWebsite/"
     },
     {
       "source": "/comment/(.*)",
       "destination": "/api/proxyComment"
     },
     {
+      "source": "/comment/(.*)/",
+      "destination": "/api/proxyComment/"
+    },
+    {
       "source": "/playurl/(.*)",
       "destination": "/api/proxyPlayurl"
     },
     {
+      "source": "/playurl/(.*)/",
+      "destination": "/api/proxyPlayurl/"
+    },
+    {
       "source": "/payType/(.*)",
       "destination": "/api/proxyPayType"
+    },
+    {
+      "source": "/payType/(.*)/",
+      "destination": "/api/proxyPayType/"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
     }
   ]
 }

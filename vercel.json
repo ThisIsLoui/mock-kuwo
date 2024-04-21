@@ -1,16 +1,4 @@
 {
-  "functions": {
-    "api/proxyApi.ts": {
-    },
-    "api/proxyOfficialWebsite.ts": {
-    },
-    "api/proxyComment.ts": {
-    },
-    "api/proxyPlayurl.ts": {
-    },
-    "api/proxyPayType.ts": {
-    }
-  },
   "rewrites": [
     {
       "source": "/(.*)",

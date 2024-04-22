@@ -1,16 +1,11 @@
-import { useLocation, useNavigate, useRouteError } from 'react-router-dom'
+import { useNavigate, useRouteError } from 'react-router-dom'
 import styles from './ErrorPage.module.scss'
 import nodata from '../../assets/nodata.png'
 import MyButton from '../../components/MyButton'
-import { routes } from '../../router'
 
 export default function ErrorPage() {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const error: any = useRouteError()
-  const location = useLocation()
-  console.log(error)
-  console.log(routes)
-  console.log(location)
 
   const nav = useNavigate()
   const is404 = error.status && error.status === 404

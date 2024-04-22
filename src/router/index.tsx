@@ -4,6 +4,7 @@ import MainLayout from '../layouts/MainLayout'
 import { request } from '../utils/request'
 import getTargetCookie from '../utils/getTargetCookie'
 import ErrorPage from '../pages/ErrorPage/ErrorPage'
+import Home from '../pages/Home'
 // meta 里的属性类型
 interface metaType {
   auth?: boolean // auth：是否需要路由守卫进行身份验证
@@ -34,10 +35,11 @@ export const routes: RouteObject[] = [
     children: [
       {
         path: '',
-        lazy: async () => {
-          const Home = await import('../pages/Home')
-          return { Component: Home.default }
-        },
+        element: <Home />,
+        // lazy: async () => {
+        //   const Home = await import('../pages/Home')
+        //   return { Component: Home.default }
+        // },
       },
       {
         path: '/rankList',

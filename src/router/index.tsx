@@ -22,7 +22,9 @@ export const routes: RouteObject[] = [
     path: '/',
     element: <MainLayout />,
     errorElement: <ErrorPage />,
-    loader: async () => {
+    loader: async ({ request: r }) => {
+      console.log(r)
+
       const { key: cookieKey, value: cookieValue } = getTargetCookie()
       if (cookieKey && cookieValue) return null
       // 如果本地没有 cookie，则请求官网首页，获取 cookie
@@ -40,7 +42,7 @@ export const routes: RouteObject[] = [
         },
       },
       {
-        path: '/rankList',
+        path: 'rankList',
         lazy: async () => {
           const RankList = await import('../pages/RankList')
           return { Component: RankList.default }

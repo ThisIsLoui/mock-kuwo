@@ -16,3 +16,5 @@
 /singer/:id/info              歌手详情_简介
 
 /search?key=xxx&type=xx       搜索
+
+docker run --name kuwo-nginx -p 5688:5688 -v /www/kuwo-nginx/nginx.conf:/etc/nginx/nginx.conf -v /www/kuwo-nginx/logs:/var/log/nginx -v /www/wwwroot/mock-kuwo/dist:/www/wwwroot/mock-kuwo/dist -d nginx:latest

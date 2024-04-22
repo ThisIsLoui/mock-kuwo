@@ -15,7 +15,7 @@ export default function ErrorPage() {
       <div className={styles['inner']}>
         <img src={nodata} alt="" />
         <h3>{is404 ? '找不到页面' : '程序出现错误'}</h3>
-        <p>{is404 ? error.data : error.message ?? error ?? '未知错误'}</p>
+        <p>{is404 ? '找不到您访问的页面，换个页面看看吧' : error.message ?? error ?? '未知错误'}</p>
         <MyButton
           style={{
             marginTop: '20px',

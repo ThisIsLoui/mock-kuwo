@@ -34,14 +34,13 @@ export const routes: RouteObject[] = [
     children: [
       {
         path: '',
-        element: <div>首页</div>,
-        // lazy: async () => {
-        //   const Home = await import('../pages/Home')
-        //   return { Component: Home.default }
-        // },
+        lazy: async () => {
+          const Home = await import('../pages/Home')
+          return { Component: Home.default }
+        },
       },
       {
-        path: 'rankList',
+        path: '/rankList',
         lazy: async () => {
           const RankList = await import('../pages/RankList')
           return { Component: RankList.default }

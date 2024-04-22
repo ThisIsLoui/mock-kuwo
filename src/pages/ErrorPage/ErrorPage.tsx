@@ -1,4 +1,4 @@
-import { useNavigate, useRouteError } from 'react-router-dom'
+import { useMatches, useNavigate, useRouteError } from 'react-router-dom'
 import styles from './ErrorPage.module.scss'
 import nodata from '../../assets/nodata.png'
 import MyButton from '../../components/MyButton'

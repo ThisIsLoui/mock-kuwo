@@ -1,0 +1,1 @@
+import{j as c,h as e}from"./index-VZJwm443.js";const m="_myli_6ai96_1",l="_active_6ai96_11",s={myli:m,active:l};function n({children:i,isActive:t,...a}){return c.jsx("li",{...a,className:e(s.myli,{[s.active]:t}),children:i})}export{n as M};

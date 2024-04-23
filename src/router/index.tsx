@@ -22,9 +22,7 @@ export const routes: RouteObject[] = [
     path: '/',
     element: <MainLayout />,
     errorElement: <ErrorPage />,
-    loader: async ({ request: r }) => {
-      console.log(r)
-
+    loader: async () => {
       const { key: cookieKey, value: cookieValue } = getTargetCookie()
       if (cookieKey && cookieValue) return null
       // 如果本地没有 cookie，则请求官网首页，获取 cookie

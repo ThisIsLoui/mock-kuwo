@@ -65,7 +65,8 @@
     "*.{vue,scss,css}": [
       "eslint --fix",
       "stylelint --fix"
-    ]
+    ],
+    "!dist/**/*.{js,ts,jsx,tsx,vue,scss,css}": []
   },
   "config": {
     "commitizen": {

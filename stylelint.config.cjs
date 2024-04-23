@@ -21,4 +21,5 @@ module.exports = {
     'no-empty-source': null,
     'no-descending-specificity': null,
   },
+  ignoreFiles: ['dist/**/*'],
 }

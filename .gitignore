@@ -8,7 +8,8 @@ pnpm-debug.log*
 lerna-debug.log*
 
 node_modules
-dist
+# 将 dist 文件夹也放入仓库，便于 git 自动部署
+# dist
 dist-ssr
 *.local
 

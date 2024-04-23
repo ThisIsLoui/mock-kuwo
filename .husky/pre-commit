@@ -1,0 +1,3 @@
+pnpm exec lint-staged
+pnpm build
+git add dist/

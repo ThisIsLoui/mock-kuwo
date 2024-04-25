@@ -9,10 +9,10 @@
 <div align="center">
   已实现官网全部页面，高度复原官网样式，数据来源于酷我音乐接口
   <br />
-  ✨感兴趣的话，右上角点个免费的 star 支持一下呗✨
+  ⭐感兴趣的话，右上角点个免费的 star 支持一下呗⭐
   <br />
   <br />
-  <a href="https://github.com/dec0dOS/amazing-github-template/issues/new?assignees=&labels=bug&template=01_BUG_REPORT.md&title=bug%3A+">👉👉点我查看演示网站👈👈</a>
+  <a href="http://mock-kuwo.dynv6.net/">👉👉点我查看演示网站👈👈</a>
 </div>
 
 <div align="center">
@@ -30,7 +30,7 @@
 
 【React 高仿酷我音乐 PC 端】是一个开源的 react 项目，已经实现了酷我音乐 PC 端网站的全部页面及大部分功能，项目的所有数据均同步获取自酷我音乐官网接口，支持播放歌曲和 MV（不是破解，只能播放免费的），具有完整的歌曲播放逻辑，支持滚动歌词、上一首、下一首、单曲循环、列表循环、顺序播放、音量调节等，还可以查看排行榜、搜索歌曲/专辑/歌单/MV/歌手、查看相应的详情、获取相应的评论等。
 
-本项目采用了如下技术栈：
+本项目使用 Typescript 编写，采用了如下技术栈：
 
 - 基础框架：React
 - 打包工具：Vite
@@ -41,21 +41,29 @@
 - 前端规范化：Eslint + Prettier + Stylelint + husky + lint-staged + commitlint
 - 其他用到的一些库：swiper、react-icons、react-paginate、react-use-audio-player、video.js、ahooks 等
 
+> 如果你对这个项目感兴趣的话，右上角点个免费的 star 支持一下呗 🤪
+
 # ⚡ 快速开始
 
-将项目克隆下来
+**将项目克隆下来**
 
 ```bash
 git clone https://github.com/ThisIsLoui/mock-kuwo.git
 ```
 
-安装依赖
+**安装依赖**
 
 ```bash
 npm i
 ```
 
-打包
+**使用开发模式预览网站**
+
+```bash
+npm run dev
+```
+
+**使用生产模式打包网站**
 
 ```bash
 npm run build
@@ -71,11 +79,23 @@ npm run build
 > 
 > 接着使用 `cz` 替代 `git commit` 进行提交，项目中已经安装好了 cz-git 适配器，会自动使用它作为 commit 消息规范
 
+**部署网站到服务器**
+
+请查看此教程：[《React 之仿酷我音乐 - docker + nginx + 宝塔面板部署前端项目并配置跨域》](https://juejin.cn/post/7361204571827437620) 
+
 # 🌐 接口说明
 
 本项目接口由收集、整理自酷我音乐官网的公开接口，具体使用了哪些接口可以 [查看接口文档](https://mock-kuwo.apifox.cn/)。
 
+**这些接口不一定长期有效，如果发现接口已经失效，网站内容无法正常获取、显示，可以提 issues 通知我。**
+
 另外可以参考 [这篇文章](https://blog.csdn.net/u012981972/article/details/131717687)，了解更多相关信息。
+
+> 请求酷我音乐官网的接口时，需要提前做好代理跨域的配置，否则无法正常请求。
+> 
+> 我已经在 vite.config.ts 中配置好了开发环境下的代理跨域，因此使用 `npm run dev` 预览网站时不会出现跨域导致接口请求不了的问题。
+> 
+> 而这些配置不会在生产环境下生效，因此部署网站到你自己的服务器上时，你需要自己在服务器上处理好代理跨域的配置，如果你使用的是 nginx ，可以复制[部署教程](https://juejin.cn/post/7361204571827437620)中的相关内容进行配置。
 
 # 💫 路由列表
 
@@ -154,7 +174,7 @@ npm run build
 
 # 📖 开源协议
 
-本项目采用 GPL v3 作为开源协议，查看 [LICENSE](/LICENSE) 以了解更多信息
+本项目采用 **GPL v3** 作为开源协议，查看 [LICENSE](/LICENSE) 以了解更多信息
 
 # 📢 免责声明
 

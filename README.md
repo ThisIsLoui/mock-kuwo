@@ -3,16 +3,17 @@
     <img src="public/logo.png" alt="Logo" width="50" height="50">
   </a>
   <br/>
-  React 高仿酷我音乐 PC 端
+  React Kuwo Music Website Clone
 </h1>
 
 <div align="center">
-  已实现官网全部页面，高度复原官网样式，数据来源于酷我音乐接口
+  Kuwo Music is a famous Chinese Music Platform. This is a clone of its webite in Desktop version. The data is sourced from the Kuwo Music API.
   <br />
-  ⭐感兴趣的话，右上角点个免费的 star 支持一下呗⭐
+  ⭐Please star if intersted. Thank you for your support!⭐
   <br />
   <br />
-  <a href="http://mock-kuwo.dynv6.net/">👉👉点我查看演示网站👈👈</a>
+  <a href="http://mock-kuwo.dynv6.net/">👉👉Clike me to view demo👈👈</a>
+  <a href="./README-ZH.md">点此查看中文文档</a>
 </div>
 
 <div align="center">
@@ -24,158 +25,158 @@
 
 </div>
 
-# 🎉 介绍
+# 🎉 Introduction
 
-![项目图片](public/preview_1.png)
+![Project Picture](public/preview_1.png)
 
-【React 高仿酷我音乐 PC 端】是一个开源的 react 项目，已经实现了酷我音乐 PC 端网站的全部页面及大部分功能，项目的所有数据均同步获取自酷我音乐官网接口，支持播放歌曲和 MV（不是破解，只能播放免费的），具有完整的歌曲播放逻辑，支持滚动歌词、上一首、下一首、单曲循环、列表循环、顺序播放、音量调节等，还可以查看排行榜、搜索歌曲/专辑/歌单/MV/歌手、查看相应的详情、获取相应的评论等。
+"React Kuwo Music Website Clone" is an open-source React project that replicates all main pages and most features of the Kuwo Music PC website. All data is synchronized from the official Kuwo Music API. It supports playing songs and MVs (only free content, no hacks). The project includes a complete music player logic with features like scrolling lyrics, previous/next track, single loop, playlist loop, sequential play, and volume adjustment. Users can also view rankings, search for songs/albums/playlists/MVs/artists, check details, and retrieve relevant comments.
 
-本项目使用 Typescript 编写，采用了如下技术栈：
+This project is written in TypeScript and uses the following tech stack:
 
-- 基础框架：React
-- 打包工具：Vite
-- 样式：CSS Modules + SCSS + classnames 库
-- 路由：React Router
-- 状态管理：Redux (with Toolkit) + Redux Persist
-- 网络请求：RTK Query + Axios
-- 前端规范化：Eslint + Prettier + Stylelint + husky + lint-staged + commitlint
-- 其他用到的一些库：swiper、react-icons、react-paginate、react-use-audio-player、video.js、ahooks 等
+- Base Framework: React
+- Bundler: Vite
+- Styling: CSS Modules + SCSS + classnames
+- Routing: React Router
+- State Management: Redux (with Toolkit) + Redux Persist
+- Network Requests: RTK Query + Axios
+- Frontend Standardization: Eslint + Prettier + Stylelint + husky + lint-staged + commitlint
+- Other Libraries Used: swiper、react-icons、react-paginate、react-use-audio-player、video.js、ahooks, etc.
 
-> 如果你对这个项目感兴趣的话，右上角点个免费的 star 支持一下呗 🤪
+> If you're interested in this project, feel free to star!🤪 Your support really means a lot to me.
 
-# ⚡ 快速开始
+# ⚡ Quick Start
 
-**将项目克隆下来**
+**Clone the Repositary**
 
 ```bash
 git clone https://github.com/ThisIsLoui/mock-kuwo.git
 ```
 
-**安装依赖**
+**Install Dependencies**
 
 ```bash
 npm i
 ```
 
-**使用开发模式预览网站**
+**Preview the website using development mode**
 
 ```bash
 npm run dev
 ```
 
-**使用生产模式打包网站**
+**Build the website using production mode**
 
 ```bash
 npm run build
 ```
 
-> 注意，本项目引入了 commitlint 用于规范 `git commit` 时的提交信息。
+> Note: This project uses commitlint to standardize `git commit`.
 > 
-> 二次开发时请先全局安装 commitizen 
+> For further development, please install commitizen globally first.
 > 
 > ```bash
 > npm install -g commitizen
 > ```
 > 
-> 接着使用 `cz` 替代 `git commit` 进行提交，项目中已经安装好了 cz-git 适配器，会自动使用它作为 commit 消息规范
+> Then, use  `cz`  instead of `git commit` to make commits. The project already has the cz-git adapter installed, which will automatically be used as the commit message standard.
 
-**部署网站到服务器**
+**Deploy the website to the server**
 
-请查看此教程：[《React 之仿酷我音乐 - docker + nginx + 宝塔面板部署前端项目并配置跨域》](https://juejin.cn/post/7361204571827437620) 
+Please check this tutorial for more information: [《React 之仿酷我音乐 - docker + nginx + 宝塔面板部署前端项目并配置跨域》](https://juejin.cn/post/7361204571827437620) 
 
-# 🌐 接口说明
+# 🌐 About the API
 
-本项目接口由收集、整理自酷我音乐官网的公开接口，具体使用了哪些接口可以 [查看接口文档](https://mock-kuwo.apifox.cn/)。
+The APIs in this project are collected and organized from publicly available endpoints on the Kuwo Music website. For details on which APIs are used, please [check this API document](https://mock-kuwo.apifox.cn/).
 
-**这些接口不一定长期有效，如果发现接口已经失效，网站内容无法正常获取、显示，可以提 issues 通知我。**
+**These APIs may not always be accessible. If you find that any APIs have become invalid and the website content cannot be fetched or displayed properly, please feel free to open an issue to notify me.**
 
-另外可以参考 [这篇文章](https://blog.csdn.net/u012981972/article/details/131717687)，了解更多相关信息。
+You can also check [this passage](https://blog.csdn.net/u012981972/article/details/131717687) for more information.
 
-> 请求酷我音乐官网的接口时，需要提前做好代理跨域的配置，否则无法正常请求。
+> When making requests to the Kuwo Music website API, you need to configure a proxy for cross-origin requests in advance; otherwise, the requests will not work properly.
 > 
-> 我已经在 vite.config.ts 中配置好了开发环境下的代理跨域，因此使用 `npm run dev` 预览网站时不会出现跨域导致接口请求不了的问题。
+> I have already configured the proxy for cross-origin requests in the development environment in vite.config.ts, so when previewing the website using `npm run dev` , there won't be any issues with API requests due to cross-origin restrictions.
 > 
-> 而这些配置不会在生产环境下生效，因此部署网站到你自己的服务器上时，你需要自己在服务器上处理好代理跨域的配置，如果你使用的是 nginx ，可以复制[部署教程](https://juejin.cn/post/7361204571827437620)中的相关内容进行配置。
+> These configurations will not take effect in the production environment. Therefore, when deploying the website to your own server, you will need to handle the proxy for cross-origin requests yourself. If you are using nginx, you can copy the relevant content from the [deployment tutorial](https://juejin.cn/post/7361204571827437620) for the configuration.
 
-# 💫 路由列表
+# 💫 Routes List
 
-**`/`：首页推荐**
+**`/`: Homepage Recommendations**
 
-![首页推荐图片](public/preview_1.png)
+![Homepage Recommendations](public/preview_1.png)
 
-**`/rankList`：排行榜**
+**`/rankList`: Rank List**
 
-![排行榜图片](public/preview_2.png)
+![Rank List](public/preview_2.png)
 
-**`/singerList`：歌手列表**
+**`/singerList`: Singer List**
 
-![歌手列表图片](public/preview_3.png)
+![Singer List](public/preview_3.png)
 
-**`/playList`：歌单列表**
+**`/playList`: Play List**
 
-![歌单列表图片](public/preview_4.png)
+![Play List](public/preview_4.png)
 
-**`/mvList`：MV列表**
+**`/mvList`: MV List**
 
-![MV列表图片](public/preview_5.png)
+![MV List](public/preview_5.png)
 
-**`/singer/:id`：歌手详情_单曲**
+**`/singer/:id`: Singer Details_Single**
 
-![歌手详情_单曲图片](public/preview_6.png)
+![Singer Details_Single](public/preview_6.png)
 
-**`/singer/:id/album`：歌手详情_专辑**
+**`/singer/:id/album`: Singer Details_Album**
 
-![歌手详情_专辑图片](public/preview_7.png)
+![Singer Details_Album](public/preview_7.png)
 
-**`/singer/:id/mv`：歌手详情_MV**
+**`/singer/:id/mv`: Singer Details_MV**
 
-![歌手详情_MV图片](public/preview_8.png)
+![Singer Details_MV](public/preview_8.png)
 
-**`/singer/:id/info`：歌手详情_简介**
+**`/singer/:id/info`: Singer Details_Info**
 
-![歌手详情_简介图片](public/preview_9.png)
+![Singer Details_Info](public/preview_9.png)
 
-**`/album/:id`：专辑详情**
+**`/album/:id`: Album Details**
 
-![专辑详情图片](public/preview_10.png)
+![Album Details](public/preview_10.png)
 
-**`/play/:id`：歌单详情**
+**`/play/:id`: Play Details**
 
-![歌单详情图片](public/preview_12.png)
+![Play Details](public/preview_12.png)
 
-**`/song/:id`：歌曲详情**
+**`/song/:id`: Song Details**
 
-![歌曲详情图片](public/preview_11.png)
+![Song Details](public/preview_11.png)
 
-**`/mvplay/:id`：MV详情**
+**`/mvplay/:id`: MV Details**
 
-![MV详情图片](public/preview_13.png)
+![MV Details](public/preview_13.png)
 
-**`/search?key=xxx&type=xx`：搜索**
+**`/search?key=xxx&type=xx`: Search**
 
-![搜索图片](public/preview_14.png)
+![Search](public/preview_14.png)
 
-路由|页面内容
+Route|Description
 -------------|-------------
-/|首页推荐
-/rankList|排行榜
-/singerList|歌手列表
-/playList|歌单列表
-/mvList|MV列表
-/singer/:id/|歌手详情_单曲
-/singer/:id/album|歌手详情_专辑
-/singer/:id/mv|歌手详情_MV
-/singer/:id/info|歌手详情_简介
-/album/:id|专辑详情
-/play/:id|歌单详情
-/song/:id|歌曲详情
-/mvplay/:id|MV详情
-/search?key=xxx&type=xx|搜索
+/|Homepage Recommendations
+/rankList|Rank List
+/singerList|Singer List
+/playList|Play List
+/mvList|MV List
+/singer/:id/|Singer Details_Single
+/singer/:id/album|Singer Details_Album
+/singer/:id/mv|Singer Details_MV
+/singer/:id/info|Singer Details_Info
+/album/:id|Album Details
+/play/:id|Play Details
+/song/:id|Song Details
+/mvplay/:id|MV Details
+/search?key=xxx&type=xx|Search
 
-# 📖 开源协议
+# 📖 License
 
-本项目采用 **GPL v3** 作为开源协议，查看 [LICENSE](/LICENSE) 以了解更多信息
+This project uses **GPL v3**. See [LICENSE](/LICENSE) for more information.
 
-# 📢 免责声明
+# 📢 Disclaimer
 
-本项目及演示网站所有用到的图片、接口均由网络公开内容收集整理而来，仅用于学习和研究目的，不得用于商业用途。任何个人或组织不得将其用于违法用途，否则后果自负。
+All images and APIs used in this project and the demo website are collected and organized from publicly available online content, and are for educational and research purposes only. They must not be used for commercial purposes. No individual or organization is allowed to use them for illegal activities; any consequences arising from such use will be at their own risk.

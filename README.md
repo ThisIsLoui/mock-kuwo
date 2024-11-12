@@ -12,7 +12,9 @@
   ⭐Please star if intersted. Thank you for your support!⭐
   <br />
   <br />
-  <a href="http://mock-kuwo.dynv6.net/">👉👉Clike me to view demo👈👈</a>
+  <a href="http://mock-kuwo.dynv6.net/"><strong>👉👉Clike me to view demo👈👈</strong></a>
+  <br />
+  <br />
   <a href="./README-ZH.md">点此查看中文文档</a>
 </div>
 
